@@ -10,13 +10,18 @@
     <div class="container">
       <div class="profile">
         <img src="myphoto.svg" alt="Minha Foto" class="profile-img" />
-        <h1>José Matheus Aquino Santos</h1>
-        <h3>F R O N T E N D | D E V E L O P E R</h3>
+        <h1 id="welcome">Bem-vindo ao meu portfólio</h1>
+        <h2 id="description">Eu sou José Matheus</h2>
+        <p id="description">F R O N T E N D | D E V E L O P E R</p>
         <button
-          onclick="window.location.href='https://www.canva.com/design/DAFzz2B50Vk/FrlZPnZ6eflraSZ-JiRZZg/edit'"
+          id="portfolioButton"
           class="portfolio-btn"
+          onclick="window.location.href='https://www.canva.com/design/DAFzz2B50Vk/FrlZPnZ6eflraSZ-JiRZZg/edit'"
         >
           Ver Portfólio
+        </button>
+        <button id="toggleDescription" class="portfolio-btn">
+          Mostrar Descrição
         </button>
       </div>
 
@@ -27,13 +32,10 @@
         </label>
         <p>Mudar cor de fundo</p>
       </div>
+
+      <p id="pageViews"></p>
     </div>
 
-    <script>
-      const toggle = document.getElementById("colorToggle");
-      toggle.addEventListener("change", () => {
-        document.body.classList.toggle("dark-mode");
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
