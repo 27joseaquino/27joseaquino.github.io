@@ -1,4 +1,4 @@
-/* Adicionando transição de opacidade para a animação de carregamento */
+/* Estilo da página permanece o mesmo */
 body {
   transition: opacity 1s;
   background-color: white;
@@ -28,6 +28,7 @@ body {
   height: 150px;
   border-radius: 50%;
   margin-bottom: 20px;
+  cursor: pointer; /* Adicionando um cursor de pointer */
 }
 
 h1 {
@@ -106,4 +107,10 @@ input:checked + .slider:before {
 
 p {
   margin-left: 10px;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 14px;
+  color: #666;
 }

@@ -43,6 +43,37 @@ toggleDescriptionButton.addEventListener('click', function () {
     }
 });
 
+// Função 6: Mudar a imagem de perfil ao passar o mouse
+const profileImg = document.getElementById('profileImg');
+profileImg.addEventListener('mouseover', function () {
+    profileImg.src = 'myphoto.svg'; // Substitua por outro caminho de imagem
+});
+profileImg.addEventListener('mouseout', function () {
+    profileImg.src = 'myphoto2.svg'; // Volta para a imagem original
+});
+
+// Função 7: Exibir data e hora atual no rodapé
+function showDateTime() {
+    const dateTimeElement = document.getElementById('dateTime');
+    const now = new Date();
+    const formattedDate = now.toLocaleDateString('pt-BR', {
+        day: '2-digit', month: '2-digit', year: 'numeric'
+    });
+    const formattedTime = now.toLocaleTimeString('pt-BR');
+    dateTimeElement.innerText = `Data: ${formattedDate} | Hora: ${formattedTime}`;
+}
+setInterval(showDateTime, 1000); // Atualiza a cada segundo
+
+// Função 8: Contador de projetos completados
+let projectsCompleted = localStorage.getItem('projectsCompleted') || 0;
+function updateProjects() {
+    projectsCompleted++;
+    localStorage.setItem('projectsCompleted', projectsCompleted);
+    document.getElementById('projectsCompleted').innerText = `Projetos completados: ${projectsCompleted}`;
+}
+// Simulação: incremento de projetos após 5 segundos para testar (remova este timeout em produção)
+setTimeout(updateProjects, 5000);
+
 // Função existente: Toggle para modo escuro
 const toggle = document.getElementById('colorToggle');
 toggle.addEventListener('change', () => {
